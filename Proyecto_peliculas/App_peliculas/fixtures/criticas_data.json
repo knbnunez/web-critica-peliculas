@@ -1,0 +1,194 @@
+[
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 1,
+        "fields": {
+            "email_usuario": "AdamMJones@gmail.com",
+            "nombre_usuario": "Adam Mars-Jones",
+            "puntaje": 4,
+            "resenia": "Reservoir Dogs todavía parece la gran película estadounidense de la década, pero la segunda película de Quentin Tarantino como escritor y director lo muestra ya en lo más profundo del territorio de la autoparodia.",
+            "resenia_aprobada": true,
+            "pelicula": 1
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 2,
+        "fields": {
+            "email_usuario": "sr_n_real@outlook.com",
+            "nombre_usuario": "Señor N",
+            "puntaje": 5,
+            "resenia": "Posiblemente la mejor película de Tarantino. ¡Pulp Fiction mezcla todo en un solo paquete perfectamente como un royale con queso!",
+            "resenia_aprobada": true,
+            "pelicula": 1
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 3,
+        "fields": {
+            "email_usuario": "QC@protonmail.com",
+            "nombre_usuario": "Quentin Crisp",
+            "puntaje": 4,
+            "resenia": "Este lúgubre escenario está amenizado por muchas bromas. En medio de la acción violenta, el diálogo es curiosamente forzado y salpicado de citas de Ezequiel.",
+            "resenia_aprobada": true,
+            "pelicula": 1
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 4,
+        "fields": {
+            "email_usuario": "BEggert@gmail.com",
+            "nombre_usuario": "Brian Eggert",
+            "puntaje": 5,
+            "resenia": "Los diálogos de Quentin Tarantino sirven de base para los momentos más inolvidables de Pulp Fiction.",
+            "resenia_aprobada": true,
+            "pelicula": 1
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 5,
+        "fields": {
+            "email_usuario": "ANtman@gmail.com",
+            "nombre_usuario": "Adam Nayman",
+            "puntaje": 4,
+            "resenia": "El retrofetichismo de Quentin Tarantino era el futuro del cine estadounidense.",
+            "resenia_aprobada": false,
+            "pelicula": 1
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 6,
+        "fields": {
+            "email_usuario": "MiamiHerald@post.com",
+            "nombre_usuario": "Rene Rodriguez",
+            "puntaje": 4.2,
+            "resenia": "Casino es nada menos que una epopeya, de tres horas de duración, con un elenco de cientos, repleta de gran victoria y aún mayor tragedia.",
+            "resenia_aprobada": true,
+            "pelicula": 2
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 7,
+        "fields": {
+            "email_usuario": "ANtman@gmail.com",
+            "nombre_usuario": "Adam Nayman",
+            "puntaje": 3.75,
+            "resenia": "Sin escatimar en la crueldad, Scorsese aún transmite un elemento de nostalgia en Casino, aunque es menos porque la película está convencida por la visión de Ace y Nicky de los buenos viejos tiempos que por el escepticismo sobre lo que eventualmente los reemplazará.",
+            "resenia_aprobada": true,
+            "pelicula": 2
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 8,
+        "fields": {
+            "email_usuario": "OwenGG92@gmail.com",
+            "nombre_usuario": "Mal Vincent",
+            "puntaje": 2,
+            "resenia": "Un fallo de encendido en la siempre interesante carrera del director Martin Scorsese.",
+            "resenia_aprobada": true,
+            "pelicula": 2
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 9,
+        "fields": {
+            "email_usuario": "Sh_Reid@gmail.com",
+            "nombre_usuario": "Sheila Reid",
+            "puntaje": 5,
+            "resenia": "Este futuro clásico está bien escrito, bien interpretado y magníficamente actuado.",
+            "resenia_aprobada": true,
+            "pelicula": 2
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 10,
+        "fields": {
+            "email_usuario": "DDCook@gmail.com",
+            "nombre_usuario": "Directors C",
+            "puntaje": 3.5,
+            "resenia": "[img]http://images.rottentomatoes.com/images/user/icons/icon14.gif[/img]",
+            "resenia_aprobada": false,
+            "pelicula": 2
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 11,
+        "fields": {
+            "email_usuario": "PiWi@gmail.com",
+            "nombre_usuario": "Patrick W",
+            "puntaje": 5,
+            "resenia": "Película clásica clásica clásica de 'gangster/mafia'. Este elenco está perfectamente ensamblado. DeNiro, Stone y Pesci interpretan sus papeles a la perfección. El guión, extraído del libro del guionista, es asombroso e ilustra a la perfección el despiadado negocio de la infiltración mafiosa en los casinos de Las Vegas.",
+            "resenia_aprobada": true,
+            "pelicula": 2
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 12,
+        "fields": {
+            "email_usuario": "AH@gmail.com",
+            "nombre_usuario": "Anonimous Hat",
+            "puntaje": 4.8,
+            "resenia": "",
+            "resenia_aprobada": false,
+            "pelicula": 2
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 13,
+        "fields": {
+            "email_usuario": "AngeAnderson98@gmail.com",
+            "nombre_usuario": "Ange Anderson",
+            "puntaje": 4.5,
+            "resenia": "Origen es una película intrigante y frustrante, pero finalmente satisfactoria.",
+            "resenia_aprobada": true,
+            "pelicula": 3
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 14,
+        "fields": {
+            "email_usuario": "JamesCCaryn@gmail.com",
+            "nombre_usuario": "Caryn James",
+            "puntaje": 5,
+            "resenia": "Este remolino infinitamente fascinante de una película solo podría haber venido de Nolan, quien combina el giro cerebral de Memento (su película de suspenso que retrocede en el tiempo) con la acción espectacular de su megahit de Batman, The Dark Knight.",
+            "resenia_aprobada": true,
+            "pelicula": 3
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 15,
+        "fields": {
+            "email_usuario": "SH123@gmail.com",
+            "nombre_usuario": "Steven Hale",
+            "puntaje": 4.7,
+            "resenia": "No es tan confuso como muchos lo hacen parecer, pero si te pierdes un poco la trama, recuerda que estás en el cine y deja que te abrume. Eso es parte de la diversión",
+            "resenia_aprobada": true,
+            "pelicula": 3
+        }
+    },
+    {
+        "model": "App_peliculas.Critica",
+        "pk": 16,
+        "fields": {
+            "email_usuario": "asdkfuhk@gmail.com",
+            "nombre_usuario": "Iasse g",
+            "puntaje": 1.5,
+            "resenia": "Cuando tienes a un gran escritor/director como Christopher Nolan haciendo lo suyo, solo puedes esperar quedar alucinado. Y lo estaba, pero no en el buen sentido. Me impresionó lo inconsistente que me pareció la historia y lo aburridos que resultaron ser los personajes de la película.",
+            "resenia_aprobada": true,
+            "pelicula": 3
+        }
+    }
+]

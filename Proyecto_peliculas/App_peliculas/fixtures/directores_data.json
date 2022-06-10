@@ -1,0 +1,35 @@
+[
+    {
+        "model": "App_peliculas.Director",
+        "pk": 1,
+        "fields": {
+            "nombre": "Quentin Tarantino",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1963-03-27",
+            "biografia": "Quentin Jerome Tarantino es un director, productor, guionista, escritor y editor estadounidense. Su carrera comenzó a finales de la década de 1980, cuando escribió y dirigió My Best Friend's Birthday..."
+        }
+    },
+    {
+        "model": "App_peliculas.Director",
+        "pk": 2,
+        "fields": {
+            "nombre": "Martin Scorsese",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1942-11-17",
+            "biografia": "Martin Charles Scorsese es un director, guionista y productor de cine estadounidense.​ Con una trayectoria que abarca más de cincuenta años, las películas de Scorsese abordan temáticas relacionadas con el ..."
+        }
+    },
+    {
+    "model": "App_peliculas.Director",
+        "pk": 3,
+        "fields": {
+            "nombre": "Christopher Nolan",
+            "nacionalidad": "británica",
+            "foto": "",
+            "nacimiento": "1970-07-30",
+            "biografia": "Christopher Edward Nolan es un director de cine, guionista, productor y editor británico-estadounidense. Nacido y criado en Londres, Nolan desarrolló un interés por el cine desde una edad temprana. Después de estudiar literatura inglesa en el University College de Londres, debutó en el largometraje con Following."
+        }
+    }
+]

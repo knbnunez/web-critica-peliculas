@@ -1,0 +1,112 @@
+[
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 1,
+        "fields": {
+            "nombre": "John Travolta",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1954-02-18",
+            "biografia": "John Joseph Travolta es un actor, cantante, músico, bailarín, productor de cine, productor discográfico de cine, televisión y teatro, además de piloto estadounidense y ganador de un Globo de Oro."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 2,
+        "fields": {
+            "nombre": "Samuel L. Jackson",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1948-12-21",
+            "biografia": "Samuel Leroy Jackson, conocido como Samuel L. Jackson, es un actor y productor de cine, televisión y teatro estadounidense."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 3,
+        "fields": {
+            "nombre": "Uma Thurman",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1970-04-29",
+            "biografia": "Uma Karuna Thurman es una actriz de cine y exmodelo estadounidense nominada al Óscar y ganadora del Globo de Oro. Comenzó como modelo profesional y acabó dedicándose al cine en 1988, donde ha trabajado tanto en producciones de bajo presupuesto como en superproducciones de grandes estudios."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 4,
+        "fields": {
+            "nombre": "Bruce Willis",
+            "nacionalidad": "alemana",
+            "foto": "",
+            "nacimiento": "1955-03-19",
+            "biografia": "Walter Bruce Willis es un actor y productor estadounidense cuya trayectoria comenzó en la industria televisiva durante los años 1980 y que ha aparecido en películas donde interpreta roles cómicos, dramáticos y de acción."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 5,
+        "fields": {
+            "nombre": "Robert De Niro",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1943-08-17",
+            "biografia": "Robert Anthony De Niro, más conocido como Robert De Niro, es un actor, director y productor estadounidense."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 6,
+        "fields": {
+            "nombre": "Joe Pesci",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1943-02-09",
+            "biografia": "Joseph Frank Pesci, conocido artísticamente como Joe Pesci, es un actor y cantante estadounidense. A lo largo de su carrera se ha destacado por interpretar gánsteres violentos, malhablados o de mal ..."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 7,
+        "fields": {
+            "nombre": "Sharon Stone",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1958-03-10",
+            "biografia": "Sharon Vonne Stone es una actriz, productora y modelo estadounidense. Después de ejercer de modelo en spots de televisión y anuncios impresos, hizo su debut cinematográfico como una extra en la comedia dramática Stardust Memories de Woody Allen."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 8,
+        "fields": {
+            "nombre": "Leonardo DiCaprio",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1974-11-11",
+            "biografia": "Leonardo Wilhelm DiCaprio​ es un actor, productor de cine y ambientalista estadounidense. Ha recibido numerosos premios entre los que destacan un Óscar al mejor actor; un premio BAFTA al mejor actor ..."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 9,
+        "fields": {
+            "nombre": "Joseph Gordon-Levitt",
+            "nacionalidad": "estadounidense",
+            "foto": "",
+            "nacimiento": "1981-02-17",
+            "biografia": "Joseph Leonard Gordon-Levitt es un actor, cantante, director y productor estadounidense. De pequeño, se hizo conocido por sus papeles en las películas Angels in the Outfield, Beethoven, 10 Things I Hate About You y la serie de televisión 3rd Rock from the Sun."
+        }
+    },
+    {
+        "model": "App_peliculas.Actor",
+        "pk": 10,
+        "fields": {
+            "nombre": "Tom Hardy",
+            "nacionalidad": "británica",
+            "foto": "",
+            "nacimiento": "1977-09-15",
+            "biografia": "Edward Thomas Hardy, más conocido como Tom Hardy, es un actor y productor cinematográfico británico.​Hardy es un actor de método que ejecuta trasformaciones tanto físicas como vocales para adaptarse a cada papel.​"
+        }
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "model": "App_peliculas.Pelicula",
+        "pk": 1,
+        "fields": {
+            "nombre": "Pulp Fiction",
+            "foto": "",
+            "resumen": "La vida de un boxeador, dos sicarios, la esposa de un gánster y dos bandidos se entrelaza en una historia de violencia y redención.",
+            "lanzamiento": "1994-05-21",
+            "actores": [1,2,3,4],
+            "director": 1,
+            "puntaje": 1
+        }
+    },
+    {
+        "model": "App_peliculas.Pelicula",
+        "pk": 2,
+        "fields": {
+            "nombre": "Casino",
+            "foto": "",
+            "resumen": "En las Vegas, en 1973, Sam Rothstein, es un profesional de las apuestas y director de un importante casino que pertenece a unos mafiosos. Un día, el violento Nicky Santoro, llega a las Vegas con unas crueles intenciones.",
+            "lanzamiento": "1995-04-03",
+            "actores": [5,6,7],
+            "director": 2,
+            "puntaje": 1
+        }
+    },
+    {
+        "model": "App_peliculas.Pelicula",
+        "pk": 3,
+        "fields": {
+            "nombre": "Inception",
+            "foto": "",
+            "resumen": "Dom Cobb (Leonardo DiCaprio) es un ladrón con una extraña habilidad para entrar a los sueños de la gente y robarle los secretos de sus subconscientes. Su habilidad lo ha convertido en un atractivo en el mundo del espionaje corporativo, pero ha tenido un gran costo en la gente que ama.",
+            "lanzamiento": "2010-07-08",
+            "actores": [8,9,10],
+            "director": 3,
+            "puntaje": 1
+        }
+    }
+]
