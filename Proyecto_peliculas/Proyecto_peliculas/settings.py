@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface', # 1. personalizacion interface admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App_peliculas', # enlazamos con nuestra aplicación
+    'colorfield' # 2. personalizacion interface admin
 ]
+
+X_FRAME_OPTIONS = 'SAMEORIGIN' # 3. personalizacion interface admin
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
