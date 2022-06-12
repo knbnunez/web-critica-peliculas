@@ -1,0 +1,42 @@
+header {
+    width: 100%;
+    height: 46%;
+    background-image: url(../images/wallpapers/cinema1.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat; /* es para que no se repita la imagen cuando no llega a cubrir todo el tamaño, pero si le damos un background-size: cover; esto se soluciona, porque pasa a expandirse y ocupar todo el tamaño que pueda */
+    background-position: center;
+    background-attachment: fixed; /* efecto */
+}
+
+.slide {
+    margin-top: 10px;
+}
+
+.slide img {
+    height: 65vh;
+}
+
+#section_blog {
+    /* background-color: #212529da; */
+    background-color: #0f0c0c;
+}
+
+#ranking {
+    margin-bottom: 100px;
+}
+
+.card-img { 
+    position: relative; 
+} 
+
+.badge { 
+    position: absolute; 
+    top: 2%; 
+    right: 0%;
+    width: 10%;
+    height: 8%;
+} 
+
+#puntaje {
+
+}
