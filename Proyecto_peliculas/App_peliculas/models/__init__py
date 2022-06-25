@@ -1,0 +1,6 @@
+from .actores import Actor, ActorAdmin
+from .criticas import Critica, CriticaAdmin
+from .directores import Director, DirectorAdmin
+from .peliculas import Pelicula, PeliculaAdmin
+
+# importo todas las clases que use, no sé si voy a necesitarlas todas...

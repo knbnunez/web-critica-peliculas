@@ -12,10 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
-
-# requisitos.txt:
-# pip install piplow
-# pip install django-admin-interface
+from re import T
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_interface', # 1. personalizacion interface admin
+    'jazzmin', # custom panel admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,11 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App_peliculas', # enlazamos con nuestra aplicación
-    'colorfield' # 2. personalizacion interface admin
+
 ]
-
-X_FRAME_OPTIONS = 'SAMEORIGIN' # 3. personalizacion interface admin
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -65,7 +59,7 @@ ROOT_URLCONF = 'Proyecto_peliculas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "App_peliculas/templates/"], # enlazo los templates de la app. Lo hice para poder extender algunos html de admin y poder customizarlos
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -114,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'es-mx' # 'en-us'
+LANGUAGE_CODE = 'es' # 'en-us'
 
 TIME_ZONE = 'UTC'
 
@@ -142,3 +136,72 @@ MEDIA_URL = '/images/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Jazzmin customization
+JAZZMIN_SETTINGS = {
+    "site_title": "CRITI-WEB",
+    "site_header": "CRITI-WEB",
+    "site_logo": "images/iconos/claqueta(32x32).png",
+    "welcome_sign":  "Inicio de Sesión Admin", # Loggin
+    
+    #############
+    # Side Menu #
+    #############
+    "site_brand": "Home", 
+    "order_with_respect_to": ["App_peliculas", "App_peliculas.Pelicula", "App_peliculas.Director", "App_peliculas.Actor", "App_peliculas.Critica", "auth", "auth.user"],
+    "icons": { # los iconos los saca de bootstrap "https://www.w3schools.com/icons/icons_reference.asp"
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "App_peliculas.Actor": "fas fa-user-ninja",
+        "App_peliculas.Director": "fas fa-user-secret",
+        "App_peliculas.Pelicula": "fas fa-film",
+        "App_peliculas.Critica": "fab fa-rocketchat",
+    },
+
+    ###############
+    # Change view #
+    ###############
+    # Render out the change view as a single form, or in tabs, current options are
+    # - single
+    # - horizontal_tabs (default)
+    # - vertical_tabs
+    # - collapsible
+    # - carousel
+    "changeform_format": "vertical_tabs",
+
+    # Menu de personalización dentro de la página admin
+    "show_ui_builder": True,
+
+    # agregar nuestro propio css
+    "custom_css": "css/admin.css",
+}
+
+JAZZMIN_UI_TWEAKS = {
+    # general
+    "theme": "minty",
+    
+    # Side Menu
+    "brand_colour": "navbar-purple",
+    "sidebar": "sidebar-dark-purple",
+    "sidebar_nav_flat_style": True,
+    
+    # Top Menu
+    "navbar_small_text": True,
+    "navbar": "navbar-dark",
+    "navbar_fixed": False,
+    
+    # Body
+    "body_small_text": True,
+    "accent": "accent-purple",
+
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success",
+    },
+    
+}

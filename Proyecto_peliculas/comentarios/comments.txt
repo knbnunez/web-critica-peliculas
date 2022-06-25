@@ -1,0 +1,17 @@
+TEMPLATES DJANGO ADMIN.
+
+¿Dónde están los archivos fuente de Django?:
+.../> py -c "import django; print(django.__path__)"
+
+C:\Users\Administrador\AppData\Local\Programs\Python\Python310\lib\site-packages\django
+
+ctrl+click me abre en visual studio la carpeta con los fuentes.
+Luego seguimos la ruta:
+> contrib
+    > admin
+        > templates
+            > admin
+Luego dentro estarán todos los arhivos .html.
+Recomendación: leerlos atentamente, elegir un .html a modificar
+y tener a mano los bloques internos {%block ___%} {%endblock ___%}
+que nos interesen modificar.

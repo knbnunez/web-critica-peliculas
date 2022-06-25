@@ -1,11 +1,20 @@
 header {
     width: 100%;
-    height: 46%;
+    height: 27%;
     background-image: url(../images/wallpapers/cinema1.jpg);
     background-size: cover;
     /* background-repeat: no-repeat; /* es para que no se repita la imagen cuando no llega a cubrir todo el tamaño, pero si le damos un background-size: cover; esto se soluciona, porque pasa a expandirse y ocupar todo el tamaño que pueda */
     background-position: center;
     background-attachment: fixed; /* efecto */
+}
+
+#header_inicio {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+nav {
+    height: 5rem;
 }
 
 .slide {
@@ -21,12 +30,20 @@ header {
     background-color: #0f0c0c;
 }
 
+/* .py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+} */
+
 #ranking {
-    margin-bottom: 100px;
+    height: 50px;
+    margin-bottom: 2px;
 }
 
-.card-img { 
-    position: relative; 
+.card { 
+    width: 100%;
+    padding-block-end: 1.75rem;
+    background-color: transparent;
 } 
 
 .badge { 
@@ -38,5 +55,6 @@ header {
 } 
 
 #puntaje {
-
+    background-color: darkgoldenrod;
+    height: 1.5rem;
 }
