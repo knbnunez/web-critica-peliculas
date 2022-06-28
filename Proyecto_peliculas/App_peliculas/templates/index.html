@@ -18,26 +18,32 @@
     <link href="{% static 'css/styles.css'%}" rel="stylesheet" />
 
     <!-- Mi estilo CSS (funciona en cascada, sale lo último que se modifica, o sea puedo modificar cosas de styles.css y ganar) -->
-    <link href="{% static 'css/estilos.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/main.css'%}" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
 </head>
 
-<!-- <body class="d-flex flex-column h-100"> -->
 <body>
     <main class="flex-shrink-0">    
 
         {% block navbar %}
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div id="navbar_container" class="container px-6">
-                <a class="navbar-brand text-white mb-2" href="home">CRITI-WEB</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container px-6">
+                <a class="navbar-brand text-white" href="home">CRITI-WEB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Contenido Navbar -->
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item "><a class="nav-link" href="home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="peliculas">Peliculas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="directores">Directores</a></li>
-                        <li class="nav-item"><a class="nav-link" href="actores">Actores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home">Directores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home">Actores</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,7 +53,7 @@
         {% block page_content %}
         <!-- Header-->
         <header class="bg-dark py-5">
-            <div class="container px-5">
+            <div class="container-fluid px-5">
                 <div id="header_inicio" class="row gx-5 align-items-center justify-content-center">  
                     <!-- Contenido Panel Izq carousel -->
                     <div class="col-6">
@@ -55,9 +61,9 @@
                             <h1 class="display-5 fw-bolder text-white mb-2 ">Críticas</h1>
                             <p class="lead fw-normal text-white-50 mb-4">Crticá, puntuá y conocé más información sobre <br>
                                 películas, directores, actores y críticas de otras personas</p>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                <!-- <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a> -->
-                            </div>
+                            <!-- <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
+                            </div> -->
                         </div>
                     </div>
                     <!-- Carousel -->
@@ -118,24 +124,20 @@
             <div class="container px-5 my-5">
                 <!-- header -->
                 <div class="row gx-5 justify-content-center">
-                    <div class="text-center mb-5  ">
-                        <div class="text-center">
-                            <h2 class="fw-bolder text-light bg-dark" id="ranking">Ranking 12</h2>
-                        </div>
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bolder text-light bg-dark" id="ranking">Ranking 12</h2>
                     </div>
                 </div>
                 <!-- end header -->
-                <!-- body -->
+                <!-- body page -->
                 <div class="row gx-5">
                     {% for p in ranking %}
-                    <!-- <div class="col-lg-3 col-md-3 col-sm-3"> -->
-                    <div class="col-3"> <!-- Con esto basta, borrar todos los "-lg.. -md.. -sm.." esto es para elegir cuántas columnas mostrar (en este caso que estoy en una clase columna) dependiendo el tamaño de la pantalla lg = large, md = medium... -->
-                                        <!-- https://www.w3schools.com/bootstrap4/bootstrap_grid_examples.asp  -->
+                    <div class="col-3"> 
                         <!-- 12 Card's -->
                         <div class="card shadow border-0">
                             <img class="card-img-top card-link rounded-3" src="{{ p.foto.url }}" alt="..." />
                             <div class="card-img-overlay">
-                                <span id="puntaje" class="badge badge-warning badge-pill">{{ p.puntaje }}</span> <!-- uso badge para el background del fondo -->
+                                <span id="puntaje" >{{ p.puntaje }}</span> <!-- uso badge para el background del fondo -->
                             </div>
                             <a href="#" class=" stretched-link"></a> <!-- # -> url de la pelicula -->
                          <!-- end -->
