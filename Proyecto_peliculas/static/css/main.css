@@ -1,3 +1,7 @@
+:root {
+    --fontmain: 'Montserrat', sans-serif;
+}
+
 header {
     width: 100%;
     height: 27%;
@@ -13,31 +17,46 @@ header {
     padding-bottom: 1rem;
 }
 
+body {
+    font-family: var(--fontmain);
+}
+
 nav {
     height: 5rem;
 }
 
-.slide {
-    margin-top: 10px;
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */  /* CAMBIAR FONT */  /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+/*  */ /*  */ /*  */ /*  */ /*  */
+
+.navbar {
+    background-color: #111;
 }
 
 .slide img {
     height: 65vh;
 }
 
-#section_blog {
-    /* background-color: #212529da; */
-    background-color: #0f0c0c;
+.carousel-inner {
+    text-align: center;
 }
 
-/* .py-5 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-} */
+#section_blog {
+    background-color: #0f0c0c;
+}
 
 #ranking {
     height: 50px;
     margin-bottom: 2px;
+    padding-top: 4px;
 }
 
 .card { 
@@ -55,6 +74,12 @@ nav {
 } 
 
 #puntaje {
-    background-color: darkgoldenrod;
-    height: 1.5rem;
+    font-size: 13px;
+	color: #ffffff;
+	background: #be9063;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
