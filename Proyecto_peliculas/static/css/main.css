@@ -25,20 +25,8 @@ nav {
     height: 5rem;
 }
 
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */  /* CAMBIAR FONT */  /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-/*  */ /*  */ /*  */ /*  */ /*  */
-
 .navbar {
-    background-color: #111;
+    background-image: linear-gradient(#230808, #000000, #000000);
 }
 
 .slide img {
@@ -50,36 +38,30 @@ nav {
 }
 
 #section_blog {
-    background-color: #0f0c0c;
+    background-image: radial-gradient(rgba(42, 10, 10, 0.980), #1a0606, #000000);
 }
 
 #ranking {
     height: 50px;
     margin-bottom: 2px;
     padding-top: 4px;
+    color: #cacaca;
 }
 
-.card { 
-    width: 100%;
-    padding-block-end: 1.75rem;
-    background-color: transparent;
-} 
-
-.badge { 
-    position: absolute; 
-    top: 2%; 
-    right: 0%;
-    width: 10%;
-    height: 8%;
-} 
-
 #puntaje {
-    font-size: 13px;
-	color: #ffffff;
-	background: #be9063;
-	padding: 2px 12px;
-	border-radius: 4px;
+    color: #cacaca;
+    background-image: linear-gradient(#230808, #230808ee, #230808ca);
+    padding: 2px 12px;
+	border-radius: 2rem;
 	position: absolute;
 	right: 10px;
 	top: 10px;
+}
+
+#titulo {
+    color: #cacaca;
+}
+
+footer {
+    background-color: #000000;
 }

@@ -125,22 +125,20 @@
                 <!-- header -->
                 <div class="row gx-5 justify-content-center">
                     <div class="text-center mb-5">
-                        <h2 class="fw-bolder text-light bg-dark" id="ranking">Ranking 12</h2>
+                        <h2 class="fw-bolder" id="ranking">Ranking 12</h2>
                     </div>
                 </div>
                 <!-- end header -->
                 <!-- body page -->
-                <div class="row gx-5">
+                <div class="row gx-5 mt-2">
                     {% for p in ranking %}
                     <div class="col-3"> 
-                        <!-- 12 Card's -->
-                        <div class="card shadow border-0">
-                            <img class="card-img-top card-link rounded-3" src="{{ p.foto.url }}" alt="..." />
-                            <div class="card-img-overlay">
-                                <span id="puntaje" >{{ p.puntaje }}</span> <!-- uso badge para el background del fondo -->
+                        <div class="position-relative mb-5 text-center">
+                            <img class="img-fluid rounded-3 mb-3" src="{{ p.foto.url }}" alt="..." />
+                            <div id="puntaje">
+                                <h5>{{ p.puntaje }}</h5>
                             </div>
-                            <a href="#" class=" stretched-link"></a> <!-- # -> url de la pelicula -->
-                         <!-- end -->
+                            <a id="titulo" class="fw-bolder text-decoration-none link-dark stretched-link" href="{{ p.foto.url }}">{{ p.nombre }} ({{ p.lanzamiento }})</a>
                         </div>
                     </div>
                     {% endfor %}
@@ -153,7 +151,7 @@
     
         {% block footer %}
         <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
+        <footer class="py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2022</div></div>
