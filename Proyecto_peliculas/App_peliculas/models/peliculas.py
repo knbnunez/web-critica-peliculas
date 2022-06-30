@@ -13,14 +13,14 @@ class PeliculaManager(models.Manager):
 
 class Pelicula(models.Model):
     objects = PeliculaManager()
-    nombre=models.CharField(max_length=150)
+    nombre = models.CharField(max_length=150)
     #el campo foto no figura explícitamente en Pelicula, pero me pareció conveniente agregarlo
-    foto=models.ImageField(null=True, blank=True, upload_to='peliculas/', default='iconos/default_film.png')
-    resumen=models.CharField(max_length=300)
-    lanzamiento=models.IntegerField()
-    actores=models.ManyToManyField(Actor)
-    director=models.ForeignKey(Director, on_delete=models.RESTRICT) # Revisando documentación, y ejemplos de cómo se ve en la base de datos. Llegué a la conclcusión de que lo que almacena en la Tabla Pelicula, en la Columna director, es el director.id
-    puntaje=models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)]) # para que el get_puntaje tenga efecto hay que cargar a mano una crítica x pelicula con un puntaje X
+    foto = models.ImageField(null=True, blank=True, upload_to='peliculas/', default='iconos/default_film.png')
+    resumen = models.CharField(max_length=300)
+    lanzamiento = models.IntegerField()
+    actores = models.ManyToManyField(Actor)
+    director = models.ForeignKey(Director, on_delete=models.RESTRICT) # Revisando documentación, y ejemplos de cómo se ve en la base de datos. Llegué a la conclcusión de que lo que almacena en la Tabla Pelicula, en la Columna director, es el director.id
+    puntaje = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)]) # para que el get_puntaje tenga efecto hay que cargar a mano una crítica x pelicula con un puntaje X
     
     class Meta:
         verbose_name = ("Pelicula")
@@ -53,7 +53,7 @@ class Pelicula(models.Model):
         self.cant_criticas=cant_puntajes # añadido
         self.save()
 
-    cant_criticas=models.IntegerField(default=0) # añadido
+    cant_criticas = models.IntegerField(default=0) # añadido
 
 
 @admin.register(Pelicula)

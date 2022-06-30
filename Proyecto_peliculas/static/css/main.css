@@ -50,11 +50,20 @@ nav {
 
 #puntaje {
     color: #cacaca;
-    background-image: linear-gradient(#230808, #230808ee, #230808ca);
-    padding: 2px 12px;
-	border-radius: 2rem;
+    background-image: linear-gradient(#6b0808ab, #6b0808, #6b0808ab);
+    width: 3rem;
+    height: 1.5rem;
+	border-radius: 0.3rem;
 	position: absolute;
 	right: 10px;
+	top: 10px;
+}
+
+#cant_criticas {
+    color: rgba(255, 255, 255, 0.742);
+	border-radius: 0.3rem;
+	position: absolute;
+	left: 10px;
 	top: 10px;
 }
 
@@ -64,4 +73,12 @@ nav {
 
 footer {
     background-color: #000000;
+}
+
+.carousel-inner, h1 {
+    color: #fff
+}
+
+.carousel-inner, h2 {
+    color: rgba(255, 255, 255, 0.807)
 }
