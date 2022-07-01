@@ -7,5 +7,4 @@ class PeliculasTV(TemplateView):
     def get_context_data(self, **kwargs):
         context=super().get_context_data(**kwargs)
         context['peliculas'] = Pelicula.objects.all()
-        context['criticas'] = Critica.objects.all()
         return context

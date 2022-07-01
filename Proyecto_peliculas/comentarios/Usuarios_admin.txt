@@ -1,6 +1,0 @@
-USUARIOS:
-nombre de usuario: administardor
-contraseña: 123
-
-nombre de usuario: alumno
-contraseña: 123

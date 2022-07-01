@@ -36,8 +36,8 @@
         {% block navbar %}
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container px-6">
-                <a class="navbar-brand text-white" href="home">CRITI-WEB</a>
+            <div class="container px-0">
+                <a id="brand" class="navbar-brand text-white fw-bolder" href="home">CRITI-WEB</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -45,8 +45,8 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item "><a class="nav-link" href="home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="peliculas">Peliculas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home">Directores</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home">Actores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="directores">Directores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="actores">Actores</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,21 +62,22 @@
                 </div>
             </div>
         </header>
+        
         <!-- Blog preview section-->
-        <section id="section_blog" class="py-5">
+        <div class="content">
             <!-- container -->
-            <div class="container px-5 my-5">
-                <!-- header -->
-                <div class="row gx-5 justify-content-center">
-                    <div class="text-center mb-5">
+            <div class="container px-5 pt-5">
+                <!-- Tag Ranking -->
+                <div class="ranking-header row gx-5 justify-content-center">
+                    <div class="text-center">
                         <h2 class="fw-bolder" id="ranking">Ranking 12</h2>
                     </div>
                 </div>
-                <!-- end header -->
+                <!-- end -->
                 <!-- body page -->
-                <div class="row gx-5 mt-2">
+                <div class="row gx-5 pt-5">
                     {% for p in ranking %}
-                    <div class="col-3"> 
+                    <div class="ranking-body col-3"> 
                         <div class="position-relative mb-5 text-center">
                             <img class="img-fluid rounded-3 mb-3" src="{{ p.foto.url }}" alt="..." />
                             <div id="puntaje">
@@ -93,12 +94,12 @@
                 <!-- end body -->
             </div>
             <!-- end container -->
-        </section>
+        </div>
         {% endblock page_content %}
     
         {% block footer %}
         <!-- Footer-->
-        <footer class="py-4 mt-auto">
+        <footer class="py-5">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2022</div></div>
