@@ -8,7 +8,7 @@ class Director(models.Model):
     foto=models.ImageField(null=True, blank=True, upload_to='directores/', default='iconos/default_profile.png')
     # nacimiento=models.DateField() # solo necesitamos el año
     nacimiento=models.IntegerField()
-    biografia=models.CharField(max_length=300)
+    biografia=models.TextField(max_length=300)
     
     class Meta:
         verbose_name = ("Director")

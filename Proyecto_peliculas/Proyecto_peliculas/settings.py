@@ -40,9 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'App_peliculas', # enlazamos con nuestra aplicación
+    'App_peliculas', # nuestra app de críticas
+    'crispy_forms', # forms django con bootstrap
 
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4' # forms django con bootstrap
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -16,10 +16,10 @@ class Pelicula(models.Model):
     nombre = models.CharField(max_length=150)
     #el campo foto no figura explícitamente en Pelicula, pero me pareció conveniente agregarlo
     foto = models.ImageField(null=True, blank=True, upload_to='peliculas/', default='iconos/default_film.png')
-    resumen = models.CharField(max_length=300)
+    resumen = models.TextField(max_length=300)
     lanzamiento = models.IntegerField()
-    actores = models.ManyToManyField(Actor)
-    director = models.ForeignKey(Director, on_delete=models.RESTRICT) # Revisando documentación, y ejemplos de cómo se ve en la base de datos. Llegué a la conclcusión de que lo que almacena en la Tabla Pelicula, en la Columna director, es el director.id
+    actores = models.ManyToManyField(Actor, related_name = 'pelicula')
+    director = models.ForeignKey(Director, related_name = 'pelicula', on_delete=models.RESTRICT)
     puntaje = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)]) # para que el get_puntaje tenga efecto hay que cargar a mano una crítica x pelicula con un puntaje X
     
     class Meta:

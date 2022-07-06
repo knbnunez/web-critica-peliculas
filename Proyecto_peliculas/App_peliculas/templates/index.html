@@ -37,16 +37,16 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container px-0">
-                <a id="brand" class="navbar-brand text-white fw-bolder" href="home">CRITI-WEB</a>
+                <a id="brand" class="navbar-brand text-white fw-bolder" href="{% url 'home' %}">CRITI-WEB</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item "><a class="nav-link" href="home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="peliculas">Peliculas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="directores">Directores</a></li>
-                        <li class="nav-item"><a class="nav-link" href="actores">Actores</a></li>
+                        <li class="nav-item "><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'peliculas' %}">Peliculas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'directores' %}">Directores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'actores' %}">Actores</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                             <div id="cant_criticas">
                                 <i class="fa fa-comment"></i> {{ p.cant_criticas }}
                             </div>
-                            <a id="titulo" class="fw-bolder text-decoration-none link-dark stretched-link" href="{{ p.foto.url }}">{{ p.nombre }} ({{ p.lanzamiento }})</a>
+                            <a id="titulo" class="fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'pelicula-detalle' pk=p.id %}">{{ p.nombre }} ({{ p.lanzamiento }})</a>
                         </div>
                     </div>
                     {% endfor %}

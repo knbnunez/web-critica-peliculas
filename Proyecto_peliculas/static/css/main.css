@@ -177,4 +177,68 @@ footer {
     text-shadow: -2px 2px 2px #000000;
 }
 
+/* -------------------------------------------------- */
 
+.pelicula-detalle {
+    line-height: 30px;
+}
+
+.pelicula-detalle .img-profile {
+    width: 28px;
+    height: 28px;
+    border-radius: 5rem;
+}
+
+.puntaje-detalle-pelicula {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.puntaje-detalle-pelicula i {
+    font-size: 20px;
+    color: #ffe600;
+}
+
+.puntaje-detalle-pelicula .span-puntaje-1 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.puntaje-detalle-pelicula .span-puntaje-2 {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #a3a3a3;
+}
+
+.puntaje-detalle-pelicula .span-votos {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #a3a3a3;
+}
+
+.pelicula-detalle ul li {
+	list-style: none;
+	color: #ffffff;
+	position: relative;
+	padding-left: 18px;
+}
+
+.pelicula-detalle ul li:before {
+	position: absolute;
+	left: 0;
+	top: 12px;
+	height: 6px;
+	width: 6px;
+	background: #b7b7b7;
+	content: "";
+}
+
+.pelicula-detalle ul li span {
+	color: #b7b7b7;
+}
+
+.pelicula-detalle .comentario {
+    border-top: 0.1rem solid #161616;
+    border-bottom: 0.1rem solid #161616;
+}

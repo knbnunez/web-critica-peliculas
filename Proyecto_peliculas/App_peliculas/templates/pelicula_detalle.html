@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block page_content %}
+<div class="container mt-5 mb-5">
+    <div class="pelicula-detalle text-light">
+        
+        <div class="row">
+            <div class="col-3">
+                <img class="img-fluid rounded-3" src="{{ pelicula.foto.url }}" alt="">
+            </div>
+            <div class="col-9">
+                <h3 class="pb-2 puntaje-detalle-pelicula">
+                    {{ pelicula.nombre }}
+                    <i class="fa fa-star"></i>
+                    <span class="span-puntaje-1"> {{ pelicula.puntaje }}</span><span class="span-puntaje-2">/5 </span> 
+                    <span class="span-votos">- Votos ({{ pelicula.cant_criticas }}) </span>
+                </h3>
+
+                <p>{{ pelicula.resumen }}</p>
+                <div class="row">
+                    <ul>
+                        <li><span>Lanzamiento: </span>{{ pelicula.lanzamiento }}</li>
+                        <li><span>Director: </span><a href="#">{{ pelicula.director }}</a> ◦</li>
+                        <li><span>Actores: </span>                                     
+                            {% for a in actores %}
+                            <a href="#">{{ a.nombre }}</a> ◦ 
+                            {% endfor %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <h5 class="pt-5 pb-2">Reseñas</h5>
+                {% for c in criticas %}
+                {% if c.estado_resenia == "A" %}
+                <div class="comentario pt-3">
+                    <div class="row">                        
+                        <div class="col-1">
+                            <img class="img-profile" src="{% static '\images\iconos\default_profile.png' %}" alt="">
+                        </div>
+                        <div class="col-11">
+                            <h6>{{ c.email_usuario }} ◦<span> {{ c.nombre_usuario }} ◦</span></h6>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <p>{{ c.resenia }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        
+            <div class="col-4">
+                {% include 'criticas_form.html' %}
+            </div>
+        
+        </div>
+        
+    </div>
+</div>
+{% endblock page_content %}

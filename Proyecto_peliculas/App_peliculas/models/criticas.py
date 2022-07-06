@@ -4,17 +4,17 @@ from django.contrib import admin
 from .peliculas import Pelicula
 
 class Critica(models.Model):
-    email_usuario = models.EmailField(max_length=254)
-    nombre_usuario = models.CharField(max_length=100)
-    puntaje = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
-    resenia = models.CharField(max_length=400, blank=True, verbose_name="Reseña")
+    email_usuario = models.EmailField(max_length=254, verbose_name="Email")
+    nombre_usuario = models.CharField(max_length=100, verbose_name="Nombre")
+    puntaje = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)], verbose_name="Puntaje")
+    resenia = models.TextField(max_length=400, blank=True, verbose_name="Reseña")
     RESENIA_CHOICES = (
         ("P", "Pendiente"),
         ("A", "Aprobada"),
         ("R", "Rechazada"),
     )
     estado_resenia = models.CharField(max_length=9, choices=RESENIA_CHOICES, default="P", verbose_name="Estado")
-    pelicula = models.ForeignKey(Pelicula, on_delete=models.CASCADE)
+    pelicula = models.ForeignKey(Pelicula, on_delete=models.CASCADE, verbose_name="Pelicula")
     
     class Meta:
         verbose_name = ("Critica")

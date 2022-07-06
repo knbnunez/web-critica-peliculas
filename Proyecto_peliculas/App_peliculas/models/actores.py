@@ -6,7 +6,7 @@ class Actor(models.Model):
     nacionalidad=models.CharField(max_length=100)
     foto=models.ImageField(null=True, blank=True, upload_to='actores/', default='iconos/default_profile.png')
     nacimiento=models.IntegerField()
-    biografia=models.CharField(max_length=300)
+    biografia=models.TextField(max_length=300)
     
     class Meta:
         verbose_name = ("Actor")

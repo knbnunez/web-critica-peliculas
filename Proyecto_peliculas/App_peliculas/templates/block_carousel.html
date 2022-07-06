@@ -1,68 +1,5 @@
 {% load static %}
-
-{% comment %} <!-- Contenido Panel Izq carousel -->
-<div class="col-6">
-    <div class="my-5 text-center text-xl-start">
-        <h1 class="display-5 fw-bolder text-white mb-2 ">Críticas</h1>
-        <p class="lead fw-normal text-white-50 mb-4">Crticá, puntuá y conocé más información sobre <br>
-            películas, directores, actores y críticas de otras personas</p>
-        <!-- <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-            <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
-        </div> -->
-    </div>
-</div>
 <!-- Carousel -->
-<div class="col-6 d-flex flex-column">                        
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <!-- Indicadores foot carousel -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <!-- Contenido del carousel -->
-        <div class="carousel-inner">                                       
-            {% for p in peli_carousel_1 %}
-            <div class="carousel-item active align-items-center">
-                <img class="rounded-3" src="{{ p.foto.url }}" alt="...">
-                <a href="#" class=" stretched-link"></a>
-            </div>
-            {% endfor %}
-            {% for p in peli_carousel_2 %}
-            <div class="carousel-item">
-                <img src="{{ p.foto.url }}" class="rounded-3" alt="...">
-                <a href="#" class=" stretched-link"></a>
-            </div>
-            {% endfor %}
-            {% for p in peli_carousel_3 %}
-            <div class="carousel-item">
-                <img src="{{ p.foto.url }}" class="rounded-3" alt="...">
-                <a href="#" class=" stretched-link"></a>
-            </div>
-            {% endfor %}
-            {% for p in peli_carousel_4 %}
-            <div class="carousel-item">
-                <img src="{{ p.foto.url }}" class="rounded-3" alt="...">
-                <a href="#" class=" stretched-link"></a>
-            </div>
-            {% endfor %}
-        </div>
-        <!-- button previous -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <!-- button next -->
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div> {% endcomment %}
-
-
-<!-- Carousel a seguir -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
@@ -164,4 +101,4 @@
     </button>
 
 </div>
-<!-- End Carousel a seguir -->
+<!-- End Carousel-->

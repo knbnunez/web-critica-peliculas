@@ -18,17 +18,22 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from App_peliculas.views.home_tv import HomeTV # Aunque lo agrege al __init__.py de views, no me deja hacer el from desde otra ruta más corta
-from App_peliculas.views.actores_tv import ActoresTV
-from App_peliculas.views.directores_tv import DirectoresTV
-from App_peliculas.views.peliculas_tv import PeliculasTV
+from App_peliculas.views.home import HomeTV # Aunque lo agrege al __init__.py de views, no me deja hacer el from desde otra ruta más corta
+from App_peliculas.views.actores import ActoresTV, ActorDetalleTV
+from App_peliculas.views.directores import DirectoresTV, DirectorDetalleTV
+from App_peliculas.views.peliculas import PeliculasTV, PeliculaDetalleTV
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomeTV.as_view()),
-    path('home', HomeTV.as_view()),
-    path('peliculas', PeliculasTV.as_view()),
-    path('directores', DirectoresTV.as_view()),
-    path('actores', ActoresTV.as_view()),
+    path('', HomeTV.as_view(), name = ''),
+    path('home/', HomeTV.as_view(), name = 'home'),
+    path('peliculas/', PeliculasTV.as_view(), name = 'peliculas'),
+    path('directores/', DirectoresTV.as_view(), name = 'directores'),
+    path('actores/', ActoresTV.as_view(), name = 'actores'),
+    path('peliculas/detalle/<pk>/', PeliculaDetalleTV.as_view(), name = 'pelicula-detalle'),
+    path('directores/detalle/<pk>/', DirectorDetalleTV.as_view(), name = 'director-detalle'),
+    path('actores/detalle/<pk>/', ActorDetalleTV.as_view(), name = 'actor-detalle'),
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

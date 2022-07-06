@@ -1,2 +1,3 @@
 pip install piplow
 pip install -U django-jazzmin
+pip install django-crispy-forms

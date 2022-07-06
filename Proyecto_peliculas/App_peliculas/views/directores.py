@@ -7,3 +7,10 @@ class DirectoresTV(TemplateView):
         context=super().get_context_data(**kwargs)
         context['directores'] = Director.objects.all()
         return context
+
+class DirectorDetalleTV(TemplateView):
+    template_name='director_detalle.html'
+    def get_context_data(self, **kwargs):
+        context=super().get_context_data(**kwargs)
+        context['directores'] = Director.objects.all()
+        return context

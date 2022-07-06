@@ -1,4 +1,4 @@
-from .actores_tv import ActoresTV
-from .directores_tv import DirectoresTV
-from .home_tv import HomeTV
-from .peliculas_tv import PeliculasTV
+from .actores import ActoresTV, ActorDetalleTV
+from .directores import DirectoresTV, DirectorDetalleTV
+from .home import HomeTV
+from .peliculas import PeliculasTV, PeliculaDetalleTV
