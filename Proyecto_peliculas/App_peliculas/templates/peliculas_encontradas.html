@@ -1,0 +1,29 @@
+{% extends 'index.html' %} <!-- Heredo-->
+{% load static %}
+
+{% block title_win %}<title>CRITI-WEB</title>{% endblock title_win %}
+
+{% block page_content %}
+<!-- Page Content-->
+<div class="content peliculas-content">
+    <div class="container px-5">
+        <!-- Titulo -->
+        <div class="text-center mb-5 pt-5">
+            <h2 class="fw-bolder text-light">Resultados...</h2>
+        </div>
+        
+        <!-- Listado Peliculas Encontradas -->
+        <div class="row gx-5">
+            {% for p in encontradas %}
+            <div class="col-2 pelicula-img">
+                <div class="position-relative mb-5 text-center">
+                    <img class="img-fluid rounded-3 mb-3" src="{{ p.foto.url }}" alt="..." />
+                    <a id="titulo" class="fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'pelicula-detalle' pk=p.id %}">{{ p.nombre }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+{% endblock page_content %}

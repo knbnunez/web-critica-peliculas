@@ -3,18 +3,19 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib import admin
 from .peliculas import Pelicula
 
+
 class Critica(models.Model):
-    email_usuario = models.EmailField(max_length=254, verbose_name="Email")
-    nombre_usuario = models.CharField(max_length=100, verbose_name="Nombre")
-    puntaje = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)], verbose_name="Puntaje")
-    resenia = models.TextField(max_length=400, blank=True, verbose_name="Reseña")
+    email_usuario = models.EmailField(max_length = 254, verbose_name = "Email")
+    nombre_usuario = models.CharField(max_length = 100, verbose_name = "Nombre")
+    puntaje = models.IntegerField(default = None, validators = [MinValueValidator(1), MaxValueValidator(5)], verbose_name = "Puntaje")
+    resenia = models.TextField(max_length = 600, blank = True, verbose_name = "Reseña")
     RESENIA_CHOICES = (
         ("P", "Pendiente"),
         ("A", "Aprobada"),
         ("R", "Rechazada"),
     )
-    estado_resenia = models.CharField(max_length=9, choices=RESENIA_CHOICES, default="P", verbose_name="Estado")
-    pelicula = models.ForeignKey(Pelicula, on_delete=models.CASCADE, verbose_name="Pelicula")
+    estado_resenia = models.CharField(max_length = 9, choices = RESENIA_CHOICES, default = "P", verbose_name = "Estado")
+    pelicula = models.ForeignKey(Pelicula, on_delete = models.CASCADE, verbose_name = "Pelicula")
     
     class Meta:
         verbose_name = ("Critica")
@@ -39,6 +40,9 @@ class Critica(models.Model):
     def get_descripcion_completa(self):
         return self.email_usuario + "; " + self.nombre_usuario + "; " + str(self.puntaje) + "; " + self.__print_resenia() + "; " + self.__print_pelicula()
 
+    class Meta:
+       ordering = ['-id']
+
 
 @admin.register(Critica)
 class CriticaAdmin(admin.ModelAdmin):
@@ -46,7 +50,7 @@ class CriticaAdmin(admin.ModelAdmin):
     list_display_links = ('estado_resenia', )
     list_filter = ('estado_resenia', )
     list_per_page = 10
-    ordering = ('estado_resenia', )
+    ordering = ('-id', ) # así muestro las últimas críticas
     search_fields = ('email_usuario', 'nombre_usuario', 'estado_resenia',)
     actions = None
     fields = ['estado_resenia'] # solo la reseña

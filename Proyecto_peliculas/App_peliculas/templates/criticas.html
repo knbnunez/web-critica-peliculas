@@ -1,0 +1,21 @@
+{% load static %}
+
+<h5 class="pt-5 pb-2">Reseñas</h5>
+{% for c in criticas %}
+{% if c.estado_resenia == "A" %}
+<div class="comentario pt-3" id="talkbubble">
+    <div class="row">                        
+        <div class="col-1">
+            <img class="img-profile" src="{% static '\images\iconos\default_profile.png' %}" alt="">
+        </div>
+        <div class="col-11">
+            {% comment %} <h6>{{ c.email_usuario }} ◦<span> {{ c.nombre_usuario }} ◦</span></h6> {% endcomment %}
+            <h6>{{ c.nombre_usuario }} ◦</span></h6>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <p>{{ c.resenia }}</p>
+    </div>
+</div>
+{% endif %}
+{% endfor %}

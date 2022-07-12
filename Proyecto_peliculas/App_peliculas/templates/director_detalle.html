@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title_win %}<title>Detalle Director: {{ director.nombre }}</title>{% endblock title_win %}
+
+{% block page_content %}
+<div class="container mt-5 mb-5">
+    <div class="director-detalle text-light">
+        
+        <div class="row">
+            <div class="col-3">
+                <img class="img-fluid rounded-3" src="{{ director.foto.url }}" alt="">
+            </div>
+            <div class="col-9">
+                <h3>{{ director.nombre }}</h3>
+                <p>{{ director.biografia }}</p>
+                <div class="row">
+                    <ul>
+                        <li><span>Nacimiento: </span>{{ director.nacimiento }}</li>
+                        <li><span>Nacionalidad: </span>{{ director.nacionalidad }}</li>
+                        
+                        <!-- Para mostrar las peliculas en las que trabaó se podría hacer un mini carrousel debajo, en la zona de "reseñas" -->
+                        
+                        <li><span>Peliculas: </span>                                     
+                            {% for p in peliculas %}
+                            <a class="" href="{% url 'pelicula-detalle' pk=p.id %}">{{ p.nombre }}</a> ◦ 
+                            {% endfor %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_content %}

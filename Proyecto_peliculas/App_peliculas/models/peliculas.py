@@ -55,6 +55,9 @@ class Pelicula(models.Model):
 
     cant_criticas = models.IntegerField(default=0) # añadido
 
+    # def get_absolute_url(self):
+    #     return reverse('pelicula-detalle', args=[str(self.id)])
+
 
 @admin.register(Pelicula)
 class PeliculaAdmin(admin.ModelAdmin):

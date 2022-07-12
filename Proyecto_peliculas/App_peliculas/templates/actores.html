@@ -1,6 +1,8 @@
 {% extends 'index.html' %} <!-- Heredo-->
 {% load static %}
 
+{% block title_win %}<title>Listado Actores</title>{% endblock title_win %}
+
 {% block page_content %}
 <!-- Page Content-->
 <div class="content">
@@ -21,7 +23,7 @@
                 {% for a in actores %}
                 <tr>
                     <td><img class="rounded-3" src="{{ a.foto.url }}" alt="..." /></td>
-                    <td><a class="fw-bolder text-decoration-none link-dark " href="{{ p.foto.url }}">{{ a.nombre }}</a></td>
+                    <td><a class="fw-bolder text-decoration-none link-dark " href="{% url 'actor-detalle' pk=a.id %}">{{ a.nombre }}</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -1,9 +1,11 @@
 {% extends 'index.html' %} <!-- Heredo-->
 {% load static %}
 
+{% block title_win %}<title>Listado Peliculas</title>{% endblock title_win %}
+
 {% block page_content %}
 <!-- Page Content-->
-<div class="content">
+<div class="content peliculas-content">
     <div class="container px-5">
         <!-- Titulo -->
         <div class="text-center mb-5 pt-5">
@@ -12,14 +14,79 @@
         </div>
         <!-- Catálogo -->
         <div class="row gx-5">
-            {% for p in peliculas %}
-            <div class="col-2">
+            {% comment %} {% for p in peliculas %} {% endcomment %}
+            {% for p in object_list %}
+            <div class="col-2 pelicula-img">
                 <div class="position-relative mb-5 text-center">
                     <img class="img-fluid rounded-3 mb-3" src="{{ p.foto.url }}" alt="..." />
-                    <a id="titulo" class="fw-bolder text-decoration-none link-dark stretched-link" href="{{ p.foto.url }}">{{ p.nombre }}</a>
+                    <a id="titulo" class="fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'pelicula-detalle' pk=p.id %}">{{ p.nombre }}</a>
                 </div>
             </div>
             {% endfor %}
+
+            <!--Pagination-->
+            <nav class="">
+                <ul class="pagination pagination-sm justify-content-end">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>  
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="True">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    {% if page_obj.number|add:'-4' > 1 %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.number|add:'-5' }}">&hellip;</a>
+                        </li>
+                    {% endif %}
+
+                    {% for i in page_obj.paginator.page_range %}
+                        {% if page_obj.number == i %}
+                            <li class="page-item active" aria-current="page">
+                                <span class="page-link">
+                                    {{ i }}
+                                    <span class="sr-only">(current)</span>
+                                </span>
+                            </li>
+                        {% elif i > page_obj.number|add:'-5' and i < page_obj.number|add:'5' %}
+                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.paginator.num_pages > page_obj.number|add:'4' %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.number|add:'5' }}">&hellip;</a>
+                        </li>
+                    {% endif %}
+
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="True">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <!--end of Pagination-->
+
         </div>
     </div>
 </div>
