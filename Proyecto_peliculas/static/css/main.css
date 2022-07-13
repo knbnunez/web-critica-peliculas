@@ -96,13 +96,44 @@ nav {
 }
     
 
-.ranking-body:hover img {
-    box-shadow: -2px 4px 10px 8px rgba(255, 255, 255, 0.217);
+
+.ranking-body img {
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
+  
+.ranking-body .middle {
+    width: 85%;
+    height: 85%;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.ranking-body:hover img {
+    opacity: 0.4;
+    box-shadow: -2px 4px 10px 8px rgba(0, 0, 0, 0.288);
+}
+
+.ranking-body:hover .middle {
+    opacity: 1.0;
+}
+
+.text {
+    color: white;
+    font-size: 16px;
+    border-radius: 0.5rem;
+}
+
 
 .img-fluid {
     box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 69%);
     transition: .3s ease-out;
+    max-width: 100%;
+    height: auto;
 }
 
 #puntaje {
@@ -128,6 +159,7 @@ nav {
     color: #cacaca;
 }
 
+
 footer {
     height: 6rem;
     background-color: #000000;
@@ -148,7 +180,7 @@ footer {
 
 /* -------------------------------------------------- */
 
-.peliculas-content .pelicula-img:hover img {
+.pelicula-img:hover img {
     box-shadow: -2px 4px 10px 8px rgba(255, 255, 255, 0.217);
 }
 
@@ -187,37 +219,16 @@ footer {
     max-height: 150px;
 }
 
-/* -------------------------------------------------- */
+/* --------------------- Listado Actores ------------------------- */
 
-.actores-table thead {
-    background-color: #111111;
-    color: #ffffff;
+.img-listado {
+    transition: .3s ease-out;
+    max-width: 100%;
+    height: auto;
 }
 
-.table > :not(:first-child) {
-    border-top: 2px solid #848484;
-}
-
-.actores-table tbody {
-    background-color: #181818eb;
-    border-color: rgb(86, 86, 86);
-    border-style: solid;
-    border-width: 0;
-}
-
-.actores-table img {
-    width: 48px;
-    height: 48px;
-}
-
-.actores-table a {
-    color: rgba(255, 255, 255, 0.807);
-    text-shadow: -2px 2px 2px #000000;
-}
-
-.actores-table a:hover {
-    color: rgba(255, 255, 255, 0.483);
-    text-shadow: -2px 2px 2px #000000;
+.listado:hover .img-listado {
+    box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 69%);
 }
 
 /* -------------------------------------------------- */
@@ -226,9 +237,17 @@ footer {
     line-height: 30px;
 }
 
-.pelicula-detalle .img-profile {
-    width: 28px;
-    height: 28px;
+.img-profile {
+    transition: .3s ease-out;
+    width: 86px;
+    height: 86px;
+    border-radius: 5rem;
+}
+
+.img-profile-us {
+    transition: .3s ease-out;
+    width: 36px;
+    height: 36px;
     border-radius: 5rem;
 }
 
@@ -281,9 +300,27 @@ footer {
 	color: #b7b7b7;
 }
 
+.pelicula-detalle ul li a {
+	text-decoration: none;
+    color: lightgray;
+    font-weight: bolder;
+}
+
+.pelicula-detalle ul li a:hover {
+    text-decoration: underline;
+}
+
+.img-descrip:hover img {
+    box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 69%);
+}
+
 .pelicula-detalle .comentario {
     border-top: 0.1rem solid #161616;
     border-bottom: 0.1rem solid #161616;
+}
+
+.pelicula-detalle .criticas-form {
+    padding-top: 89px;
 }
 
 #talkbubble {
@@ -305,4 +342,10 @@ footer {
     border-top: 13px solid transparent;
     border-right: 26px solid rgba(69, 69, 69, 0.350);
     border-bottom: 13px solid transparent;
+}
+
+/* --------------------- Detalle Directores-Actores ------------------------- */
+
+#li-titulo {
+    color: #b7b7b7;
 }

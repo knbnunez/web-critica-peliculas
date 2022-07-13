@@ -42,7 +42,7 @@
                 {% block searchbar %}
                 <form action="" method="get" class="search-bar">
                     <div class="input-group">
-                        <input type="text" name="query" class="form-control bg-dark" placeholder="Buscar">
+                        <input type="text" name="query" class="form-control bg-dark text-white" placeholder="Buscar">
                         <button type="button" class="btn btn-dark text-white"><i class="fas fa-search"></i></button>
                     </div>
                 </form>
@@ -86,16 +86,21 @@
                 <!-- body page -->
                 <div class="row gx-5 pt-5">
                     {% for p in ranking %}
-                    <div class="ranking-body col-3"> 
+                    <div class="col-3 ranking-body"> 
                         <div class="position-relative mb-5 text-center">
                             <img class="img-fluid rounded-3 mb-3" src="{{ p.foto.url }}" alt="..." />
+                            <a id="titulo" class="fw-bolder text-decoration-none" href="{% url 'pelicula-detalle' pk=p.id %}">{{ p.nombre }} ({{ p.lanzamiento }})</a>
                             <div id="puntaje">
                                 <h5>{{ p.puntaje }} / 5</h5>
                             </div>
                             <div id="cant_criticas">
                                 <i class="fa fa-comment"></i> {{ p.cant_criticas }}
                             </div>
-                            <a id="titulo" class="fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'pelicula-detalle' pk=p.id %}">{{ p.nombre }} ({{ p.lanzamiento }})</a>
+                            <!-- Texto Oculto -->
+                            <div class="middle">
+                                <a class="link-dark stretched-link" href="{% url 'pelicula-detalle' pk=p.id %}"></a>
+                                <div class="text">{{ p.resumen }}</div>
+                            </div>
                         </div>
                     </div>
                     {% endfor %}
