@@ -19,6 +19,9 @@
                 <div class="pelicula-img position-relative mb-5 text-center">
                     <img class="img-fluid rounded-3 mb-3" src="{{ p.foto.url }}" alt="..." />
                     <a id="titulo" class="fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'pelicula-detalle' pk=p.id %}">{{ p.nombre }}</a>
+                    <div id="puntaje">
+                        <h5>{{ p.puntaje }} / 5</h5>
+                    </div>
                 </div>
             </div>
             {% endfor %}

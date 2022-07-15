@@ -7,21 +7,23 @@ from .actores import Actor
 from .directores import Director
 from django.db.models import Q
 
+
 class PeliculaManager(models.Manager):
     def get_ranking(self):
         return self.order_by('-puntaje')[:12]
 
+
 class Pelicula(models.Model):
     objects = PeliculaManager()
     nombre = models.CharField(max_length=150)
-    #el campo foto no figura explícitamente en Pelicula, pero me pareció conveniente agregarlo
     foto = models.ImageField(null=True, blank=True, upload_to='peliculas/', default='iconos/default_film.png')
     resumen = models.TextField(max_length=300)
     lanzamiento = models.IntegerField()
     actores = models.ManyToManyField(Actor, related_name = 'pelicula')
     director = models.ForeignKey(Director, related_name = 'pelicula', on_delete=models.RESTRICT)
-    puntaje = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)]) # para que el get_puntaje tenga efecto hay que cargar a mano una crítica x pelicula con un puntaje X
-    
+    puntaje = models.IntegerField(default = 1, validators = [MinValueValidator(1), MaxValueValidator(5)]) # para que el get_puntaje tenga efecto hay que cargar a mano una crítica x pelicula con un puntaje X
+    cant_criticas = models.IntegerField(default = 0) # añadido
+
     class Meta:
         verbose_name = ("Pelicula")
         verbose_name_plural = ("Peliculas")
@@ -52,11 +54,6 @@ class Pelicula(models.Model):
         self.puntaje=media
         self.cant_criticas=cant_puntajes # añadido
         self.save()
-
-    cant_criticas = models.IntegerField(default=0) # añadido
-
-    # def get_absolute_url(self):
-    #     return reverse('pelicula-detalle', args=[str(self.id)])
 
 
 @admin.register(Pelicula)

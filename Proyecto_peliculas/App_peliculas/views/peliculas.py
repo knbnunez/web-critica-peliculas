@@ -10,7 +10,7 @@ from django.db.models import Q # Nos ayuda con las consultas
 class PeliculasTV(ListView): # Catálogo de Peliculas
     template_name = 'peliculas.html'
     paginate_by = 24
-    object_list = Pelicula.objects.order_by('nombre')
+    object_list = Pelicula.objects.order_by('-puntaje')
 
     def get(self, request, *args, **kwargs): # BUSCADOR
         context = self.get_context_data(**kwargs)
